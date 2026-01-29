@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-4">{{ page.title }}</h1>
+    
+    {% if page.intro %}
+        <div class="prose mb-8">
+            {{ page.intro|richtext }}
+        </div>
+    {% endif %}
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {# TODO 6: Loop through topics and display: #}
+        {# - Title (link to topic.url) #}
+        {# - Description (first 100 chars) #}
+        {# - Difficulty level (badge with color) #}
+        {# - Number of questions #}
+        {# Use Tailwind for card styling #}
+    </div>
+</div>
+{% endblock %}
